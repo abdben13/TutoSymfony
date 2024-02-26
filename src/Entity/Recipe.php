@@ -24,7 +24,7 @@ class Recipe
     private ?string $content = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $crearedAt = null;
+    private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $updatedAt = null;
@@ -73,14 +73,14 @@ class Recipe
         return $this;
     }
 
-    public function getCrearedAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->crearedAt;
+        return $this->createdAt;
     }
 
-    public function setCrearedAt(\DateTimeImmutable $crearedAt): static
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
-        $this->crearedAt = $crearedAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }

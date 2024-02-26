@@ -6,7 +6,9 @@
 lorem ipsum
 
     <ul>
+      {% for recipe in recipes %}
         <li>
-          <a href="{{ path('recipe.show', {id: 32, slug: 'pate-bolognaise'}) }}">Pates bolognaise</a>
+          <a href="{{ path('recipe.show', {id: recipe.id, slug: recipe.slug}) }}">{{ recipe.title }}</a>
         </li>
+        {% endfor %}
 {% endblock %}
